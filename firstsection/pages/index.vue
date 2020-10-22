@@ -9,11 +9,7 @@
         My prime Nuxt.js project
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
         </a>
         <a
@@ -25,22 +21,43 @@
         </a>
       </div>
     </div>
+    <div>
+      <transition name="fade">
+        <p v-if="show" key="o">Now you see me!</p>
+        <p v-else key="p">Now you don't!</p>
+      </transition>
+      <button @click="show = !show">click me</button>
+    </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from "~/components/Logo.vue";
 
 export default {
-  layout:"custome",
+  layout: "custome",
   components: {
     Logo
   },
-  
-}
+
+  data() {
+    return {
+      show: false
+    };
+  }
+};
 </script>
 
 <style>
+.face-enter-active,
+.face-leave-active {
+  transition: opacity 0.5s;
+}
+
+.face-enter,
+.face-leave-active {
+  opacity: 0;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -51,8 +68,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

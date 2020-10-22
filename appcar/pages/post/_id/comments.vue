@@ -1,15 +1,15 @@
 <template>
     <div>
-       <h2>Anothet</h2>
-      
+    <h2 >Comment</h2>
+    
     </div>
 </template>
 <script>
 export default {
- 
+    //    transition: 'bounce',
     data() {
         return {
-        show:false
+        
         };
     },
     methods: {
@@ -20,8 +20,7 @@ export default {
     },
     watch: {
     
-    },
-     middleware:['mv1']
+    }
 };
 </script>
 <style scoped>

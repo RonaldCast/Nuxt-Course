@@ -22,7 +22,6 @@ Nuxt will assign context to the anonymous function as its argument value.
 
 ## Layout: customizing view
 
-
 You can create de custome page layout and apply in difference pages.
 
 ```
@@ -36,7 +35,6 @@ You can create de custome page layout and apply in difference pages.
 <style scoped></style>
 
 ```
-
 
 In the child you can apply the proviedad layout
 
@@ -54,7 +52,6 @@ export default {
 </script>
 
 ```
-
 
 <script>
 import Logo from '~/components/Logo.vue'
@@ -155,7 +152,13 @@ export const actions = {
     } catch (e) {
        nuxt_context.error({message:e.message})
     }
-   }}
+   }
 ```
 
-## Others
+## The head() Method
+
+The head() method allows us to set contents inside the head tag. It is Nuxt’s API for vue meta.
+
+### hid property
+
+Naturally, we only want to keep the description meta of the child component. The parent component’s description meta will be used as a fall-back choice. If the child component has no description meta, the parent component’s description meta will come in and save the day.

@@ -1,0 +1,8 @@
+  
+  .face-enter-active, .face-leave-active{
+    transition: opacity .5s;
+}
+
+.face-enter, .face-leave-active{
+   opacity: 0;
+}

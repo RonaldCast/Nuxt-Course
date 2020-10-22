@@ -8,9 +8,11 @@
 </template>
 <script>
 export default {
+
   data() {
     return {};
   },
+ 
   methods: {
     async getPost() {
       await this.$store.dispatch({ type: "getPost" });
